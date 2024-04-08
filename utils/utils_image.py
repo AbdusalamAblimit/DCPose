@@ -17,4 +17,4 @@ def read_image(image_path):
 
 def save_image(image_save_path, image_data):
     create_folder(os.path.dirname(image_save_path))
-    return cv2.imwrite(image_save_path, image_data, [100])
+    return cv2.imwrite(image_save_path, image_data, [cv2.IMWRITE_JPEG_QUALITY,100])

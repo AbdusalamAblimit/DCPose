@@ -324,8 +324,8 @@ class PoseTrack(VideoDataset):
                 if max(obj['keypoints']) == 0:
                     continue
 
-                joints_3d = np.zeros((self.num_joints, 3), dtype=np.float)
-                joints_3d_vis = np.zeros((self.num_joints, 3), dtype=np.float)
+                joints_3d = np.zeros((self.num_joints, 3), dtype=np.float32)
+                joints_3d_vis = np.zeros((self.num_joints, 3), dtype=np.float32)
                 for ipt in range(self.num_joints):
                     joints_3d[ipt, 0] = obj['keypoints'][ipt * 3 + 0]
                     joints_3d[ipt, 1] = obj['keypoints'][ipt * 3 + 1]
@@ -380,9 +380,9 @@ class PoseTrack(VideoDataset):
             num_boxes = num_boxes + 1
 
             center, scale = box2cs(box, self.aspect_ratio, self.bbox_enlarge_factor)
-            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float)
+            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float32)
             joints_3d_vis = np.ones(
-                (self.num_joints, 3), dtype=np.float)
+                (self.num_joints, 3), dtype=np.float32)
             kpt_data.append({
                 'image': osp.join(self.img_dir, img_name),
                 'center': center,

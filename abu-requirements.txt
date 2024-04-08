@@ -1,0 +1,8 @@
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+pip install tqdm opencv-python-headless scipy tabulate pycocotools 
+pip install tensorboard tensorboardX yasc
+
+pip install shapely click motmetrics sheen
+
+pip install ipython

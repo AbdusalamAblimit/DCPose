@@ -144,7 +144,7 @@ class CommonFunction(BaseFunction):
         dataset = dataloader.dataset
         # prepare data fro validate
         num_samples = len(dataset)
-        all_preds = np.zeros((num_samples, self.cfg.MODEL.NUM_JOINTS, 3), dtype=np.float)
+        all_preds = np.zeros((num_samples, self.cfg.MODEL.NUM_JOINTS, 3), dtype=np.float32)
         all_boxes = np.zeros((num_samples, 6))
         image_path = []
         filenames = []
