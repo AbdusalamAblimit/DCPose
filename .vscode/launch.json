@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "python": "/home/server/miniconda3/envs/dcpose-py310/bin/python",     // 必须指定当前环境python解释器的路径
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",    //${file}指的是当前正在查看的文件，也可以写一个具体的文件名来启动,例如："./tools/run.py"
+            "cwd": "${fileDirname}",  //${fileDirname}指的是将运行的.py文件所在目录作为运行目录来启动，相当于cd进文件所在目录然后启动
+            // "cwd":"${workspaceFolder}",
+            "console": "integratedTerminal",
+            "args": [ //命令行参数，如果没有参数可以注释掉
+                "--cfg", "../configs/posetimation/DcPose/posetrack17/model_RSN.yaml",
+                "--train",
+                "--val"
+            ]
+        }
+    ]
+}

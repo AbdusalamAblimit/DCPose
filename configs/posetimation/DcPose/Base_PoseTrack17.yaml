@@ -10,8 +10,8 @@ DISTANCE: 2
 DATASET:
   NAME: "PoseTrack"
   JSON_DIR: "./DcPose_supp_files/posetrack17_json_files"
-  IMG_DIR: "./DataSet/PoseTrack2017/images_renamed"
-  TEST_IMG_DIR: "./DataSet/PoseTrack2017/images"
+  IMG_DIR: "./DataSet/PoseTrack2017/posetrack_data/images_renamed"
+  TEST_IMG_DIR: "./DataSet/PoseTrack2017/posetrack_data/images"
   IS_POSETRACK18: false
   COLOR_RGB: true
   DATASET: 'posetrack'
